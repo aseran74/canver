@@ -212,6 +212,57 @@
               </li>
             </ul>
             
+            <!-- Comparación Sucio/Limpio con Slider -->
+            <div class="mt-8 relative group">
+              <div class="relative overflow-hidden rounded-xl border-2 border-gray-300 shadow-theme-lg cursor-pointer" 
+                   onclick="openImageModal('./images/Sucio.png', './images/Limpio.png')">
+                <div class="relative h-64 sm:h-80">
+                  <!-- Imagen de fondo (Después) -->
+                  <img 
+                    src="./images/Limpio.png" 
+                    alt="Estado limpio después de la limpieza" 
+                    class="absolute inset-0 h-full w-full object-cover"
+                  />
+                  
+                  <!-- Imagen de overlay (Antes) con slider -->
+                  <div class="absolute inset-0 overflow-hidden" id="beforeAfterContainerReformas">
+                    <img 
+                      src="./images/Sucio.png" 
+                      alt="Estado sucio antes de la limpieza" 
+                      class="absolute inset-0 h-full w-full object-cover"
+                      id="beforeImageReformas"
+                      style="clip-path: inset(0 70% 0 0);"
+                    />
+                  </div>
+                  
+                  <!-- Slider control -->
+                  <div class="absolute inset-y-0 left-[30%] w-1 bg-white shadow-lg cursor-ew-resize z-20" 
+                       id="sliderControlReformas"
+                       onmousedown="startDragReformas(event)"
+                       ontouchstart="startDragReformas(event)">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white shadow-theme-lg flex items-center justify-center">
+                      <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  <!-- Labels -->
+                  <div class="absolute top-4 left-4 z-30 rounded-md bg-red-500 px-3 py-1.5 text-sm font-semibold text-white shadow-lg">
+                    Antes
+                  </div>
+                  <div class="absolute top-4 right-4 z-30 rounded-md bg-success-500 px-3 py-1.5 text-sm font-semibold text-white shadow-lg">
+                    Después
+                  </div>
+                  
+                  <!-- Click para ver en pantalla completa -->
+                  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 rounded-md bg-white/90 backdrop-blur-sm px-4 py-2 text-xs font-medium text-gray-700 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                    Click para ver en pantalla completa
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <!-- Galería de Fotos de Reformas -->
             <div class="mt-8">
               <h4 class="mb-4 text-sm font-semibold text-gray-900">Galería de Proyectos</h4>
@@ -321,57 +372,6 @@
             <!-- Ejemplos de Limpieza -->
             <div class="mt-8 space-y-6">
               <h4 class="text-lg font-semibold text-gray-900">Ejemplos de Nuestros Trabajos</h4>
-              
-              <!-- Comparación Sucio/Limpio con Slider -->
-              <div class="relative group">
-                <div class="relative overflow-hidden rounded-xl border-2 border-gray-300 shadow-theme-lg cursor-pointer" 
-                     onclick="openImageModal('./images/Sucio.png', './images/Limpio.png')">
-                  <div class="relative h-64 sm:h-80">
-                    <!-- Imagen de fondo (Después) -->
-                    <img 
-                      src="./images/Limpio.png" 
-                      alt="Estado limpio después de la limpieza" 
-                      class="absolute inset-0 h-full w-full object-cover"
-                    />
-                    
-                    <!-- Imagen de overlay (Antes) con slider -->
-                    <div class="absolute inset-0 overflow-hidden" id="beforeAfterContainer">
-                      <img 
-                        src="./images/Sucio.png" 
-                        alt="Estado sucio antes de la limpieza" 
-                        class="absolute inset-0 h-full w-full object-cover"
-                        id="beforeImage"
-                        style="clip-path: inset(0 50% 0 0);"
-                      />
-                    </div>
-                    
-                    <!-- Slider control -->
-                    <div class="absolute inset-y-0 left-1/2 w-1 bg-white shadow-lg cursor-ew-resize z-20" 
-                         id="sliderControl"
-                         onmousedown="startDrag(event)"
-                         ontouchstart="startDrag(event)">
-                      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white shadow-theme-lg flex items-center justify-center">
-                        <svg class="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path>
-                        </svg>
-                      </div>
-                    </div>
-                    
-                    <!-- Labels -->
-                    <div class="absolute top-4 left-4 z-30 rounded-md bg-red-500 px-3 py-1.5 text-sm font-semibold text-white shadow-lg">
-                      Antes
-                    </div>
-                    <div class="absolute top-4 right-4 z-30 rounded-md bg-success-500 px-3 py-1.5 text-sm font-semibold text-white shadow-lg">
-                      Después
-                    </div>
-                    
-                    <!-- Click para ver en pantalla completa -->
-                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 rounded-md bg-white/90 backdrop-blur-sm px-4 py-2 text-xs font-medium text-gray-700 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                      Click para ver en pantalla completa
-                    </div>
-                  </div>
-                </div>
-              </div>
               
               <!-- Videos de Comparación Sucio/Limpio -->
               <div class="space-y-6">
@@ -898,7 +898,7 @@
                   </a>
                 </div>
               </div>
-            </div>
+              </div>
 
             <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-theme-sm">
               <div class="flex items-start gap-4">
@@ -912,7 +912,7 @@
                   <p class="mt-2 text-gray-600">Reformaslimpiezascanver@gmail.com</p>
                 </div>
               </div>
-            </div>
+              </div>
 
             <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-theme-sm">
               <div class="flex items-start gap-4">
@@ -929,7 +929,7 @@
                   <p class="text-gray-600">28034 Madrid, España</p>
                 </div>
               </div>
-            </div>
+              </div>
 
             <div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-theme-sm">
               <div class="flex items-start gap-4">
@@ -1057,10 +1057,10 @@
                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E" 
                     alt="Antes" 
                     class="absolute inset-0 w-full h-full object-contain bg-transparent"
-                    style="clip-path: inset(0 50% 0 0); min-height: 100vh;"
+                    style="clip-path: inset(0 70% 0 0); min-height: 100vh;"
                   />
                 </div>
-                <div class="absolute inset-y-0 left-1/2 w-1 bg-white shadow-2xl cursor-ew-resize z-20" 
+                <div class="absolute inset-y-0 left-[30%] w-1 bg-white shadow-2xl cursor-ew-resize z-20" 
                      id="modalSliderControl"
                      onmousedown="startDrag(event, true)"
                      ontouchstart="startDrag(event, true)">
@@ -1077,9 +1077,9 @@
                   Después
                 </div>
               </div>
+              </div>
             </div>
           </div>
-        </div>
         
         <!-- Modal para imagen simple -->
         <div id="singleImageModal" class="hidden w-full h-full flex items-center justify-center p-4">
@@ -1139,6 +1139,7 @@
         // Initialize Before/After Slider - delay to ensure DOM is ready
         setTimeout(() => {
           initBeforeAfterSlider();
+          initBeforeAfterSliderReformas();
         }, 100);
       });
 
@@ -1207,6 +1208,61 @@
       function stopDrag() {
         isDragging = false;
         currentSlider = null;
+      }
+
+      // Before/After Slider Functions for Reformas Section
+      let isDraggingReformas = false;
+
+      function initBeforeAfterSliderReformas() {
+        const container = document.getElementById('beforeAfterContainerReformas');
+        const slider = document.getElementById('sliderControlReformas');
+        const beforeImage = document.getElementById('beforeImageReformas');
+        
+        if (!container || !slider || !beforeImage) {
+          return;
+        }
+        
+        try {
+          // Mouse events
+          slider.addEventListener('mousedown', (e) => startDragReformas(e));
+          document.addEventListener('mousemove', handleDragReformas);
+          document.addEventListener('mouseup', stopDragReformas);
+          
+          // Touch events
+          slider.addEventListener('touchstart', (e) => startDragReformas(e));
+          document.addEventListener('touchmove', handleDragReformas);
+          document.addEventListener('touchend', stopDragReformas);
+        } catch (error) {
+          console.error('Error initializing reformas slider:', error);
+        }
+      }
+
+      function startDragReformas(e) {
+        isDraggingReformas = true;
+        e.preventDefault();
+      }
+
+      function handleDragReformas(e) {
+        if (!isDraggingReformas) return;
+        e.preventDefault();
+        
+        const container = document.getElementById('beforeAfterContainerReformas');
+        const beforeImage = document.getElementById('beforeImageReformas');
+        const slider = document.getElementById('sliderControlReformas');
+        
+        if (!container || !beforeImage || !slider) return;
+        
+        const rect = container.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const x = clientX - rect.left;
+        const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+        
+        beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+        slider.style.left = `${percentage}%`;
+      }
+
+      function stopDragReformas() {
+        isDraggingReformas = false;
       }
 
       // Helper function to get correct image path (webpack processed)
@@ -1371,8 +1427,8 @@
           const beforeImage = document.getElementById('modalBeforeImage');
           const slider = document.getElementById('modalSliderControl');
           if (beforeImage && slider) {
-            beforeImage.style.clipPath = 'inset(0 50% 0 0)';
-            slider.style.left = '50%';
+            beforeImage.style.clipPath = 'inset(0 70% 0 0)';
+            slider.style.left = '30%';
           }
         }, 100);
       }
