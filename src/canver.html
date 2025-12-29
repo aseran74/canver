@@ -46,7 +46,7 @@
           <div class="flex items-center">
             <a href="#" class="flex items-center">
               <img 
-                src="./images/Logo.png" 
+                src="./images/Canver png.png" 
                 alt="Canver - Reformas y Limpiezas" 
                 class="h-36 w-auto"
               />
@@ -248,6 +248,22 @@
                   />
                   <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
                 </div>
+                <div class="group relative overflow-hidden rounded-lg cursor-pointer" onclick="openSingleImageModal('./images/11.jpeg')">
+                  <img 
+                    src="./images/11.jpeg" 
+                    alt="Proyecto de reforma 5" 
+                    class="h-24 w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg cursor-pointer" onclick="openSingleImageModal('./images/12.jpeg')">
+                  <img 
+                    src="./images/12.jpeg" 
+                    alt="Proyecto de reforma 6" 
+                    class="h-24 w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -352,6 +368,45 @@
                     <!-- Click para ver en pantalla completa -->
                     <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 rounded-md bg-white/90 backdrop-blur-sm px-4 py-2 text-xs font-medium text-gray-700 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
                       Click para ver en pantalla completa
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Videos de Comparación Sucio/Limpio -->
+              <div class="space-y-6">
+                <div class="relative overflow-hidden rounded-xl border-2 border-gray-300 shadow-theme-lg">
+                  <div class="relative h-64 sm:h-80">
+                    <video 
+                      src="./images/Sucio_video.mp4" 
+                      alt="Estado sucio antes de la limpieza" 
+                      class="h-full w-full object-cover"
+                      controls
+                      muted
+                      loop
+                    >
+                      Tu navegador no soporta el elemento de video.
+                    </video>
+                    <div class="absolute top-4 left-4 z-30 rounded-md bg-red-500 px-3 py-1.5 text-sm font-semibold text-white shadow-lg">
+                      Antes
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-xl border-2 border-gray-300 shadow-theme-lg">
+                  <div class="relative h-64 sm:h-80">
+                    <video 
+                      src="./images/Limpio_video.mp4" 
+                      alt="Estado limpio después de la limpieza" 
+                      class="h-full w-full object-cover"
+                      controls
+                      muted
+                      loop
+                    >
+                      Tu navegador no soporta el elemento de video.
+                    </video>
+                    <div class="absolute top-4 right-4 z-30 rounded-md bg-success-500 px-3 py-1.5 text-sm font-semibold text-white shadow-lg">
+                      Después
                     </div>
                   </div>
                 </div>
@@ -647,7 +702,7 @@
           </p>
         </div>
 
-        <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <!-- Image 5 with Effects -->
           <div class="group relative overflow-hidden rounded-2xl bg-white shadow-theme-sm transition-all duration-300 hover:shadow-theme-xl hover:-translate-y-2">
             <div class="aspect-square overflow-hidden">
@@ -709,6 +764,38 @@
             <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
               <h3 class="text-lg font-semibold text-white">Oficina Profesional</h3>
               <p class="mt-1 text-sm text-gray-200">Espacio de trabajo renovado</p>
+            </div>
+          </div>
+
+          <!-- Image 11 with Effects -->
+          <div class="group relative overflow-hidden rounded-2xl bg-white shadow-theme-sm transition-all duration-300 hover:shadow-theme-xl hover:-translate-y-2">
+            <div class="aspect-square overflow-hidden">
+              <img 
+                src="./images/11.jpeg" 
+                alt="Proyecto de reforma 5" 
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+              <h3 class="text-lg font-semibold text-white">Proyecto Realizado</h3>
+              <p class="mt-1 text-sm text-gray-200">Trabajo de calidad garantizada</p>
+            </div>
+          </div>
+
+          <!-- Image 12 with Effects -->
+          <div class="group relative overflow-hidden rounded-2xl bg-white shadow-theme-sm transition-all duration-300 hover:shadow-theme-xl hover:-translate-y-2">
+            <div class="aspect-square overflow-hidden">
+              <img 
+                src="./images/12.jpeg" 
+                alt="Proyecto de reforma 6" 
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+              <h3 class="text-lg font-semibold text-white">Proyecto Realizado</h3>
+              <p class="mt-1 text-sm text-gray-200">Trabajo de calidad garantizada</p>
             </div>
           </div>
         </div>
@@ -872,7 +959,7 @@
           <div class="md:col-span-1">
             <div class="mb-6 inline-block rounded-lg bg-white p-4">
               <img 
-                src="./images/Logo.png" 
+                src="./images/Canver png.png" 
                 alt="Canver - Reformas y Limpiezas" 
                 class="h-20 w-auto"
               />
