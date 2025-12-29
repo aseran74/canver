@@ -1,6 +1,12 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "build",
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/canver/:path*",
+      "destination": "/:path*"
+    }
+  ]
 }
 
